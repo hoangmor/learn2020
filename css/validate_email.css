@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #373737;
+}
+
+h1
+{
+    position: relative;
+    font-size: 20px;
+    color: #9f9f9f;
+    letter-spacing: 1px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+#form
+{
+    position: relative;
+}
+
+#form #email
+{
+    width: 300px;
+    background: #292929;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 18px;
+    padding: 20px;
+}
+
+#form .inputBox
+{
+    position: relative;
+}
+
+#form #text 
+{
+    display: block;
+    color: #000;
+    font-weight: 300;
+    padding: 5px;
+    font-style: italic;
+}
+
+#form.valid .inputBox::before
+{
+    content: '';
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    width: 24px;
+    height: 24px;
+    background: url(../images/valid.png);
+    background-size: cover;
+    z-index: 1000;
+    padding: 6px;
+}
+
+#form.invalid .inputBox::before
+{
+    content: '';
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    width: 24px;
+    height: 24px;
+    background: url(../images/invalid.png);
+    background-size: cover;
+    z-index: 1000;
+    padding: 6px;
+}

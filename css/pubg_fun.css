@@ -1,0 +1,29 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    /* overflow: hidden; */
+    min-height: 100vh;
+}
+
+section{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: url(../images/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    cursor: url(../images/aim.png), pointer;
+}
+
+span{
+    width: 40px;
+    height: 38px;
+    background: url(../images/hole.png);
+    position: absolute;
+    pointer-events: none;
+    transform: translateY(10px);
+}

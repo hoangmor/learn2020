@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    background: #000;
+    min-height: 200vh;
+}
+
+header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 40px 100px;
+    z-index: 100000;
+}
+
+.sticky
+{
+    background: #fff;
+    color: black;
+}
+
+.sticky .logo 
+{
+    color: black;
+}
+
+.sticky ul li a
+{
+    color: black;
+}
+
+header .logo
+{
+    position: relative;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.6s;
+}
+
+header ul
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li 
+{
+    position: relative;
+    list-style: none;
+}
+
+header ul li a{
+    text-decoration: none;
+    position: relative;
+    margin: 0 15px;
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: 500px;
+    transition: 0.6px;
+}
+
+.banner
+{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(../images/microphone-5594702_1920.jpg);
+    background-size: cover;
+}
