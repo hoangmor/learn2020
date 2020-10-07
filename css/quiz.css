@@ -165,3 +165,89 @@ body {
     font-size: 30px;
     margin-bottom: 10px;
 }
+
+/*Ipad ngang(1024 x 768)*/
+@media screen and (max-width: 1024px){
+  .container .main {
+      width: 750px;
+  }
+  .container .main header {
+      font-size: 40px;
+      margin-bottom: 20px;
+  }
+
+  .question {
+      font-size: 30px;
+      margin-bottom: 25px;
+  }
+
+  .answers label {
+      font-size: 30px;
+      padding: 20px;
+      margin-right: 10px;
+  }
+
+  .answers {
+      margin-bottom: 25px;
+  }
+
+  #submit {
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+  }
+
+  #show-2 h3 {
+    font-size: 35px;
+    margin-bottom: 15px;
+  }
+
+  #results {
+    width: 400px;
+    padding: 10px 20px 10px 20px;
+    font-size: 127px;
+    margin-bottom: 25px;
+  }
+
+  #showCode {
+    width: 400px;
+    padding: 10px 20px 10px 20px;
+  }
+
+  #showCode h4 {
+      font-size: 25px;
+  }
+
+  #showCode h2 {
+    font-size: 88px;
+  }
+
+  .notice {
+    font-size: 23px;
+    margin-bottom: 18px;
+  }
+
+  .skew {
+      width: 250px;
+      padding: 5px;
+  }
+
+  .skew p {
+    font-size: 22px;
+  }
+}
+/*Ipad dọc(768 x 1024)*/
+@media screen and (max-width: 768px){
+    
+}
+/*Tablet nhỏ(480 x 640)*/
+@media screen and (max-width: 480px){
+    
+}
+/*Iphone(480 x 640)*/
+@media screen and (max-width: 320px){
+    
+}
+/*Smart phone nhỏ*/
+@media screen and (max-width: 240px){
+    
+}
