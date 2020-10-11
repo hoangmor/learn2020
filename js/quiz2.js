@@ -150,7 +150,7 @@
     }
   
     const quizContainer = document.getElementById("quiz");
-    // const resultsContainer = document.getElementById("results");
+    const resultsContainer = document.getElementById("results");
     // const submitButton = document.getElementById("submit");
   
     // display quiz right away

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!-- code by webdevtrick (https://webdevtrick.com) -->
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quiz</title>
+    <link rel="stylesheet" type="text/css" href="../css/quiz3.css">
+</head>
+<body>
+    <section class="container">
+        <div class="row row-header">
+            <h3>LANCOME</h3>
+            <p>PARIS</p>
+        </div>
+        <div class="row row-contain" id="rowContainMain">
+            <h3>TENT IDOLE ULTRA WEAR</h3>
+            <P>Trò Chơi Trắc Nghiệm</P>
+        </div>
+        <div class="row row-contain" id="rowContainQuestion">
+            <div class="contain-question" id="quiz">
+            </div>
+        </div>
+        <div class="row row-contain" id="rowContainResultSuccess">
+            <div class="contain-question containResult">
+                <h3 id="textResult">CHÚC MỪNG BẠN ĐÃ HOÀN THÀNH TRÒ CHƠI</h3>
+                <h5>TỔNG SỐ ĐÁP ÁN ĐÚNG LÀ</h5>
+                <div>
+                    <p id="totalScoreSuccess"></p>
+                </div>
+                <div id="divshowResultSuccess">
+                    <div>
+                        <p class="fontWeight">MÃ ĐỔI QUÀ</p><p id="showResultSuccess"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row row-footer" id="footerStart">
+            <div id="startGame"><p>BẮT ĐẦU CHƠI</p></div>
+        </div>
+        <div class="row row-footer" id="footerScore">
+            <div><p id="showScore"><span id="currentScore">0</span>/<span id="totalQuestion"></span></p></div>
+        </div>
+        <div class="row row-footer" id="footerResultReplay">
+            <div id="replayGame"><p>CHƠI LẠI</p></div>
+        </div>
+    </section>
+<script src="../js/quiz3.js"></script>
+</body>
+</html>

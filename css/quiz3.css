@@ -1,0 +1,711 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+*{
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    cursor: url('../images/cursor-svgrepo-com.svg'), auto;
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(../font/VollkornRegular-51aXv.ttf);
+  }
+
+@font-face {
+    font-family: moongladeDemoBold;
+    src: url(../font/MoongladeDemoBold-jOzM.ttf);
+  }
+
+@font-face {
+    font-family: rondal;
+    src: url(../font/RondalRegular-K7ORW.otf);
+
+  }
+@font-face {
+    font-family: garamondPro;
+    /* src: url(../font/FONTGaramond/GaramondPremrPro.otf); */
+    src: url(../font/NegaraserifHairlineitalic-nRgjJ.otf);
+}
+
+input {
+    opacity: 0;
+}
+.contain-question .answers label div:hover{
+    cursor: pointer;
+}
+body {
+    /* overflow: hidden; */
+    min-height: 100vh;
+}
+#divshowResultSuccess {
+    display: none;
+}
+#divshowResultSuccess {
+    padding: 6px;
+}
+#divshowResultSuccess div {
+    padding: 10px;
+    background-color: #fff;
+    width: 100% !important;
+    margin-top: 0px!important;
+    color: black !important;
+}
+#divshowResultSuccess div .fontWeight {
+    color: black !important;
+    font-size: 20px;
+}
+#divshowResultSuccess div #showResultSuccess {
+    color: black !important;
+    font-size: 50px !important;
+}
+
+.container {
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(../images/BG.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex-direction: column;
+    background-position: center;
+}
+
+.row {
+    padding: 20px;
+    /* margin-top: 20px; */
+    /* border: 2px solid black; */
+}
+
+.row-header {
+    text-align: center;
+    color: #fff;
+    height: 15%;
+}
+
+.row-header h3 {
+    font-family: myFirstFont;
+    font-size: 50px;
+}
+
+.row-header p {
+    font-family: moongladeDemoBold;
+    font-size: 20px;
+    margin-top: -14px;
+}
+
+.row-footer {
+    text-align: center;
+    position: relative;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.row-footer div {
+    border: 1px solid #fff;
+    /* background-color: #fff; */
+    font-size: 20px;
+    padding: 6px;
+    width: 20%;
+}
+
+.row-footer div p {
+    padding: 20px 40px 20px 40px;
+    background-color:  #fff;
+}
+
+.row-contain {
+    /* height: 300px; */
+}
+
+.row-contain {
+    text-align: center;
+    height:60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* border: 2px solid black; */
+}
+
+.row-contain-question {
+    position: relative;
+    text-align: center;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* border: 2px solid black; */
+}
+.row-contain h3 {
+    color: #fff;
+    font-family: myFirstFont;
+    font-size: 66px;
+}
+
+.row-contain p {
+    color: #fff;
+    font-family: myFirstFont;
+    font-size: 50px;
+}
+
+.row-footer div p:hover {
+    cursor: pointer;
+    /* background-color: rgb(80, 80, 80); */
+}
+
+#rowContainQuestion {
+    display: none;
+}
+
+.contain-question {
+    width: 65%;
+    /* border: 2px solid black; */
+    position: relative;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.question{
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  .answers {
+    margin-bottom: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .answers label{
+    display: block;
+    margin-bottom: 15px;
+  }
+  button{
+    font-family: 'Brandon Grotesque', sans-serif;
+      font-size: 15px;
+      background-color: #fff;
+      color: #212020;
+      border: 0px;
+      border-radius: 20px;
+      padding: 20px;
+   cursor: -webkit-grabbing; cursor: grabbing;
+      margin-bottom: 20px;
+    margin-top: 60px;
+  }
+  button:hover{
+      background-color: #e5acac;
+  }
+  
+  .slide{
+    position: absolute;
+    margin: auto;
+    /* left: 0px;
+    top: 0px; */
+    width: 100%;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .active-slide{
+    opacity: 2;
+    z-index: 3;
+  }
+  .quiz-container{
+    position: relative;
+    height: 200px;
+    margin-top: 40px;
+  }
+  
+  input:checked {
+      color: red;
+      background-color: black;
+    }
+  
+  .mystyle {
+      background-color: chocolate;
+      padding: 10px;
+  }
+  
+  .mystyleNot {
+      background-color: darkslategrey;
+      padding: 10px;
+  }
+
+  #rowContainQuestion {
+    /* font-family: rondal; */
+    color: #fff;
+  }
+
+  .contain-question .answers label {
+      padding: 6px;
+      border: 1px solid #fff;
+      width: 30%;
+      margin-bottom: 30px;
+      color: #ff3300;
+  }
+
+  .contain-question .answers label div {
+      padding: 20px;
+      background-color: #fff;
+  }
+  .contain-question .answers label div:hover {
+      /* background-color: #ff3333; */
+      /* color: #fff; */
+  }
+  .contain-question .question {
+      font-size: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin-bottom: 30px;
+  }
+
+  .containResult {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .contain-question .answers label {
+      /* font-family: rondal; */
+      font-size: 25px;
+  }
+  .contain-question .question div {
+      width: 70%;
+      /* text-align: left; */
+  }
+
+  .contain-question .answers label .mystyle {
+      background-color: #ff3300;
+      color: #fff;
+      cursor: not-allowed;
+  }
+
+  .contain-question .answers label .mystyleNot {
+    background-color: #ccccb3;
+    color: #fff;
+}
+
+.contain-question .answers .label-hidden{
+    opacity: 0;
+    z-index: -111;
+}
+.contain-question .answers .not-label-hidden{
+    opacity: 1;
+    display: block;
+}
+
+#footerScore {
+    display: none;
+}
+
+#showScore {
+    font-family: myFirstFont;
+    font-size: 60px;
+    font-weight: bold;
+    padding: 0px;
+
+}
+#rowContainResultSuccess {
+    display: none;
+}
+
+#rowContainResultSuccess .contain-question h5 {
+    color: #fff;
+    font-family: myFirstFont;
+    font-size: 30px;
+}
+#rowContainResultSuccess .contain-question div {
+    border: 1px solid #fff;
+    padding: 6px;
+    width: 40%;
+    margin-top: 25px;
+}
+
+#rowContainResultSuccess .contain-question div #totalScoreSuccess {
+    background-color: #ddd;
+    color: #ff3300;
+    font-size: 76px;
+    font-weight: bold;
+}
+
+#footerResultSuccess {
+    display: none;
+}
+
+#showResultSuccess {
+    font-size: 62px;
+    font-weight: bold;
+}
+
+#footerResultSuccess div {
+    width: 24%;
+}
+
+#footerResultSuccess div p {
+    padding: 5px 0px 0px 0px;
+
+}
+
+.fontWeight {
+    font-weight: bold;
+}
+
+#footerResultReplay {
+    display: none;
+}
+
+/* Responsive */
+/*Ipad ngang(1024 x 768)*/
+@media screen and (max-width: 1600px){
+    .containResult h3 {
+        font-size: 60px !important;
+    }
+}
+@media screen and (max-width: 1500px){
+    .container {
+        height: 100vh !important;
+    }
+
+    .contain-question {
+        width: 95% !important;
+    }
+
+    .contain-question .answers label {
+        margin-bottom:10px !important;
+        /* padding: 10px; */
+    }
+
+    .row-contain {
+        height: 65% !important;
+    }
+
+    #footerScore {
+        margin-top: 5px;
+    }
+
+    .row-contain .containResult h3 {
+        font-size:43px !important;
+    }
+
+    /* .containResult h3 {
+        font-size: 60px !important;
+    } */
+
+    .containResult {
+        width: 70% !important;
+    }
+
+    #showResultSuccess {
+        font-size: 55px;
+    }
+
+    .row-footer #startGame {
+        font-family: garamondPro;
+        font-size: 30px;
+        width: 31%!important;
+    }
+    #footerResultSuccess div {
+        width: 28%;
+    }
+    .contain-question .question div {
+        width: 100%;
+    }
+    #replayGame {
+        width: 28% !important;
+        font-size: 30px!important;
+    }
+
+    #rowContainResultSuccess {
+        /* height: 80% !important; */
+    }
+    .contain-question .answers label div {
+        /* padding: 30px; */
+    }
+
+    #rowContainResultSuccess .contain-question div #totalScoreSuccess {
+        font-size: 50px!important;
+    }
+
+    #divshowResultSuccess div #showResultSuccess {
+        color: black !important;
+        font-size: 30px !important;
+    }
+}
+@media screen and (max-width: 1366px){
+    .contain-question .question div {
+        font-size: 45px;
+    }
+
+    .contain-question .answers label div {
+        font-size: 40px;
+    }
+    .contain-question .answers label {
+        width: 59%!important;
+        margin-bottom: 30px !important;
+    }
+    .row-contain .containResult h3 {
+        font-size: 55px!important;
+    }
+    #rowContainResultSuccess .contain-question div #totalScoreSuccess {
+        font-size: 82px!important;
+        padding: 10px;
+    }
+    #divshowResultSuccess div .fontWeight {
+        color: black !important;
+        font-size: 30px;
+    }
+    #divshowResultSuccess div #showResultSuccess {
+        color: black !important;
+        font-size: 55px !important;
+    }
+    .row-footer #startGame {
+        font-size: 35px;
+        width: 38%!important;
+    }
+    .containResult {
+        width: 100% !important;
+    }
+    #replayGame {
+        width: 36% !important;
+        font-size: 35px!important;
+    }
+}
+/*Ipad dọc(768 x 1024)*/
+@media screen and (max-width: 1023.98px){
+    .row-footer #startGame {
+        width: 40%!important;
+        font-size: 25px !important;
+        /* font-weight: bold !important; */
+    }
+
+    .container {
+        background-size:cover !important;
+    }
+
+    .contain-question .question div {
+        width: 100% !important;
+    }
+
+    .contain-question .answers label {
+        font-size: 30px !important;
+        width: 73%!important;
+        margin-bottom: 30px !important;
+        padding: 10px !important;
+    }
+
+    .row-contain .containResult h3 {
+        font-size: 48px!important;
+    }
+
+    .containResult {
+        width: 95% !important;
+    }
+
+    .row-contain {
+        height: 60% !important;
+    }
+
+    #footerResultSuccess div {
+        width: 37% !important;
+    }
+
+    #showResultSuccess {
+        font-size: 58px !important;
+    }
+
+    #replayGame {
+        width: 40% !important;
+        font-size: 30px!important;
+    }
+
+    .contain-question .answers label div {
+        padding: 27px !important;
+    }
+    .row-contain h3 {
+        font-size: 55px;
+    }
+    .contain-question .answers label div {
+        font-size: 35px;
+    }
+    .contain-question .question div {
+        font-size: 35px;
+    }
+    #divshowResultSuccess div #showResultSuccess {
+        font-size: 50px !important;
+    }
+    #rowContainResultSuccess .contain-question div #totalScoreSuccess {
+        font-size: 75px!important;
+    }
+}
+
+/* @media screen and (max-width: 700px) and (min-width: 400px) {  */
+@media screen and (max-width: 767.98px) { 
+    .row-header h3 {
+        font-family: myFirstFont;
+        font-size: 27px;
+    }
+    .contain-question .question div {
+        font-size: 22px !important;
+    }
+    .row-header p {
+        font-size: 17px;
+        margin-top: -8px;
+    }
+    .row-contain h3 {
+        font-size: 30px;
+    }
+    .row-contain p {
+        font-size: 30px;
+    }
+    .row-footer #startGame {
+        width: 56%!important;
+        font-size: 15px !important;
+    }
+    .contain-question .answers label div {
+        font-size: 20px;
+    }
+    .contain-question .answers label div {
+        padding: 15px !important;
+    }
+    .contain-question .answers label {
+        margin-bottom: 20px !important;
+        width: 77%!important;
+    }
+    #showScore {
+        font-size: 50px;
+    }
+    .row-footer div {
+        width: 39%;
+    }
+    .row-contain .containResult h3 {
+        font-size: 25px!important;
+    }
+    #rowContainResultSuccess .contain-question h5 {
+        font-size: 15px;
+    }
+    #rowContainResultSuccess .contain-question div #totalScoreSuccess {
+        font-size: 35px!important;
+    }
+    #rowContainResultSuccess .contain-question div {
+        width: 40%;
+    }
+    #divshowResultSuccess div #showResultSuccess {
+        font-size: 25px !important;
+    }
+    #divshowResultSuccess div .fontWeight {
+        font-size: 12px;
+    }
+    #replayGame {
+        width: 56% !important;
+        font-size: 15px!important;
+    }
+}
+
+@media screen and (max-width: 479.89px){
+    .row-contain h3 {
+        font-size: 26px;
+    }
+    .row-contain p {
+        font-size: 26px;
+    }
+    .row-footer #startGame {
+        font-size: 13px !important;
+    }
+    .contain-question .answers label {
+        width: 82%!important;
+    }
+    .row-footer #startGame {
+        width: 60%!important;
+    }
+    .row-footer div p {
+        padding: 15px 40px 15px 40px;
+    }
+    #showScore {
+        font-size: 40px;
+    }
+    .contain-question .answers label div {
+        padding: 12px !important;
+    }
+    .contain-question .question div {
+        font-size: 19px !important;
+    }
+    .contain-question .answers label div {
+        font-size: 16px;
+    }
+    .contain-question .answers label div {
+        padding: 12px !important;
+    }
+}
+/*Iphone(480 x 640)*/
+@media screen and (max-width: 320px){
+    .row-contain p {
+        font-size: 20px;
+    }
+    .row-contain h3 {
+        font-size: 22px;
+    }
+    .row-footer div p {
+        padding: 15px 30px 15px 30px;
+    }
+    .row-footer #startGame {
+        width: 67%!important;
+    }
+    .contain-question .answers label {
+        margin-bottom: 10px !important;
+    }
+    .contain-question .answers label div {
+        padding: 10px !important;
+    }
+    .contain-question .answers label div {
+        font-size: 13px;
+    }
+    .contain-question .question div {
+        font-size: 18px !important;
+    }
+    #showScore {
+        font-size: 36px;
+    }
+    .contain-question .answers label {
+        width: 78%!important;
+    }
+    .contain-question .answers label {
+        padding: 5px !important;
+    }
+    .row-contain .containResult h3 {
+        font-size: 21px!important;
+    }
+    #rowContainResultSuccess .contain-question h5 {
+        font-size: 12px;
+    }
+    #rowContainResultSuccess .contain-question div #totalScoreSuccess {
+        padding: 5px;
+    }
+    #rowContainResultSuccess .contain-question div {
+        width: 46%;
+    }
+    #totalScoreSuccess {
+        font-size: 30px!important;
+    }
+    #divshowResultSuccess div .fontWeight {
+        font-size: 10px;
+    }
+    #divshowResultSuccess div #showResultSuccess {
+        font-size: 20px !important;
+    }
+}
+
